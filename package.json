@@ -1,0 +1,35 @@
+{
+  "name": "requester-cli",
+  "version": "0.0.3",
+  "description": "A simple CLI to make web request with simple command, without using programs like postman or something",
+  "main": "cli.js",
+  "bin": {
+    "requester": "cli.js"
+  },
+  "scripts": {
+    "update": "npm unlink && npm link"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KAMUI966/Requester.git"
+  },
+  "keywords": [
+    "requester",
+    "http-request",
+    "http",
+    "request",
+    "postrequest",
+    "getrequest"
+  ],
+  "author": "KAMUI966",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KAMUI966/Requester/issues"
+  },
+  "homepage": "https://github.com/KAMUI966/Requester#readme",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "phin": "^3.5.0",
+    "readline-sync": "^1.4.10"
+  }
+}
