@@ -1,4 +1,4 @@
-const phin = require("phin"), { question, keyInSelect } = require("readline-sync"), chalk = require("chalk"), reqmethods = ["GET", "POST", "DELETE", "HEAD", "OPTIONS"];
+const phin = require("phin"), { question, keyInSelect } = require("readline-sync"), chalk = require("chalk"), reqmethods = ["GET", "POST", "DELETE", "HEAD", "OPTIONS", "PUT", "PATCH"];
 var reqbody, reqmethod;
 var index = keyInSelect(reqmethods, chalk.yellow('? Request Method'));
 if(index == -1) return console.log(chalk.redBright("Cancelled !"));
@@ -6,7 +6,7 @@ reqmethod = reqmethods[index];
 if(!reqmethods.includes(reqmethod)) return console.log(chalk.red("Invalid Request Type !"));
 var requrl = question(chalk.yellow("? URL "))
 if(!requrl.startsWith("http")) return console.log(chalk.red("Invalid URL !"));
-if(reqmethod == "POST") reqbody = question(chalk.yellow("? Body (Empty = No Body) "));
+if(reqmethod == "POST" || reqmethod == "PATCH") reqbody = question(chalk.yellow("? Body (Empty = No Body) "));
 var reqheaders = question(chalk.yellow("? Headers (Empty = No Headers) "))
 phin({
     url: requrl,
