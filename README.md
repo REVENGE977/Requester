@@ -1,3 +1,5 @@
+[![npm version](https://badge.fury.io/js/requester-cli.svg)](https://badge.fury.io/js/requester-cli)
+
 A simple CLI to make web request with simple command, without using programs like postman or something
 
 Example
