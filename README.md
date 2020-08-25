@@ -20,3 +20,14 @@ Response Body: Success
 ```
 
 Note: i didn't try the cli fully, so if there is any problems please make a [issue case](https://github.com/KAMUI966/Requester/issues/new/choose)
+
+
+# Installation
+Using NPM:
+```
+$ npm i requester-cli -g
+```
+Using Yarn:
+```
+$ yarn global add requester-cli
+```
