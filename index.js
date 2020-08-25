@@ -12,7 +12,7 @@ phin({
     url: requrl,
     method: reqmethod,
     data: reqbody && reqbody.length < 1 ? null : reqbody,
-    headers: reqheaders.length < 1 ? null : reqheaders
+    headers: reqheaders.length < 1 ? null : JSON.parse(reqheaders)
 }).then(res => {
     console.log(`Status Code ${res.statusCode == 200 ? chalk.greenBright(res.statusCode) : chalk.gray(res.statusCode)}`)
     console.log(`Response Body: ${res.body}`);
