@@ -6,7 +6,7 @@ reqmethod = reqmethods[index];
 if(!reqmethods.includes(reqmethod)) return console.log(chalk.red("Invalid Request Type !"));
 var requrl = question(chalk.yellow("? URL "))
 if(!requrl.startsWith("http")) return console.log(chalk.red("Invalid URL !"));
-if(reqmethod == "POST" || reqmethod == "PATCH") reqbody = question(chalk.yellow("? Body (Empty = No Body) "));
+if(reqmethod == "POST" || reqmethod == "PATCH" || reqmethod == "PUT") reqbody = question(chalk.yellow("? Body (Empty = No Body) "));
 var reqheaders = question(chalk.yellow("? Headers (Empty = No Headers) "))
 phin({
     url: requrl,
